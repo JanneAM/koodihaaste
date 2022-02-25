@@ -3,7 +3,7 @@ import "./App.css";
 import Menu from "./components/Menu/Menu";
 import InfoViewer from "./components/InfoViewer/InfoViewer";
 import { getDataFromArray } from "./functions/dataHandlers";
-import { calculateTravelTimeForDistance, calculateDifferences, calculateConsumptionForSpeed } from "./functions/calculations";
+import { calculateTravelTimeForDistance, calculateDifferences, calculateConsumptionForSpeed, calculateTotalConsumption } from "./functions/calculations";
 import Input from "./components/Input/Input";
 import Button from "./components/Button/Button";
 
@@ -148,6 +148,8 @@ function App() {
           consumptionOnSpeed2={consumptionOnSpeed2}
           travelTimeOnSpeed1={travelTimeOnSpeed1}
           travelTimeOnSpeed2={travelTimeOnSpeed2}
+          totalConsumptionOnSpeed1={calculateTotalConsumption(distance, consumptionOnSpeed1)}
+          totalConsumptionOnSpeed2={calculateTotalConsumption(distance, consumptionOnSpeed2)}
           consumptionDifference={calculateDifferences(
             consumptionOnSpeed2,
             consumptionOnSpeed1

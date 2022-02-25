@@ -36,7 +36,8 @@ li:last-child{
 }
 
 .menu-button{
-  font-size: 1.5rem;
+  width: 10rem;
+  font-size: 1.2rem;
   color: #282c34;
   border: none;
   cursor: pointer;

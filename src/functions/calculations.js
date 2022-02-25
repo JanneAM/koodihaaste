@@ -9,3 +9,7 @@ export  const calculateConsumptionForSpeed = (speed, baseConsumption) => {
  export const calculateTravelTimeForDistance = (distance, speed) => {
     return (distance / speed).toFixed(2);
   };
+
+  export const calculateTotalConsumption = (distance, consumption) => {
+    return ((distance*consumption)/100).toFixed(2);
+  }
