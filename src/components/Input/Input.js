@@ -1,10 +1,13 @@
 import "./Input.css";
 
-const Input = ({ placeholder,error, onChange, value }) => {
+const Input = ({ placeholder,error, onChange, value, inputName }) => {
   return (
     <div className="input-container">
-      <input type="text" placeholder={placeholder} onChange={onChange} value={value}></input>
-      {error && <p class="error-text">{error}</p>}
+        <label className="input-label" htmlFor={inputName}>{inputName}</label>
+        <div>
+      <input type="text" name={inputName} placeholder={placeholder} onChange={onChange} value={value}></input>
+      {error && <p className="error-text">{error}</p>}
+      </div>
     </div>
   );
 };
